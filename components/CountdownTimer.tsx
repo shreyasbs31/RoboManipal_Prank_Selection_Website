@@ -35,7 +35,8 @@ export default function CountdownTimer({ isDarkTheme = false }: CountdownTimerPr
 
   useEffect(() => {
     const calculateTimeLeft = () => {
-      const targetDate = new Date('2026-04-06T18:00:00').getTime();
+      // April 6, 2026 at 6:00 PM IST = 12:30 PM UTC
+      const targetDate = new Date('2026-04-06T12:30:00Z').getTime();
       const now = new Date().getTime();
       const difference = targetDate - now;
 
@@ -55,6 +56,8 @@ export default function CountdownTimer({ isDarkTheme = false }: CountdownTimerPr
   }, []);
 
   if (!mounted) return null;
+
+  const isEventStarted = timeLeft.days === 0 && timeLeft.hours === 0 && timeLeft.minutes === 0 && timeLeft.seconds === 0;
 
   const TimeUnitBox = ({
     label,
@@ -117,8 +120,19 @@ export default function CountdownTimer({ isDarkTheme = false }: CountdownTimerPr
       transition={{ duration: 0.5 }}
       className="space-y-6"
     >
-      {/* Countdown Grid */}
-      <div className="grid grid-cols-4 gap-2 md:gap-3">
+      {isEventStarted ? (
+        <div className="text-center space-y-4">
+          <p className="text-3xl md:text-4xl font-black" style={{ color: '#C44536' }}>
+            We're waiting for you.
+          </p>
+          <p className="text-sm" style={{ color: '#A8BCC1' }}>
+            The workshop has begun. Get here now.
+          </p>
+        </div>
+      ) : (
+        <>
+          {/* Countdown Grid */}
+          <div className="grid grid-cols-4 gap-2 md:gap-3">
         <TimeUnitBox label="Days" value={timeLeft.days} />
         <TimeUnitBox label="Hours" value={timeLeft.hours} />
         <TimeUnitBox label="Minutes" value={timeLeft.minutes} />
@@ -177,6 +191,8 @@ export default function CountdownTimer({ isDarkTheme = false }: CountdownTimerPr
           </p>
         </div>
       </div>
+        </>
+      )}
     </motion.div>
   );
 }

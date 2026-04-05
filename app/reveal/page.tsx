@@ -4,6 +4,7 @@ import ConfettiEffect from '@/components/ConfettiEffect';
 import CountdownTimer from '@/components/CountdownTimer';
 import LoadingSequence from '@/components/LoadingSequence';
 import GridBackground from '@/components/GridBackground';
+import BrutalistButton from '@/components/BrutalistButton';
 import { motion } from 'framer-motion';
 import { useCallback, useState } from 'react';
 
@@ -119,61 +120,215 @@ export default function RevealPage() {
               transition={{ duration: 0.4, staggerChildren: 0.12, delayChildren: 0.1 }}
               className="space-y-8"
             >
-              {/* WELCOME - Main Reveal */}
-              <PremiumCard delay={0} borderColor="#C5A059" accentColor="#C5A059">
+              {/* HERO - The Reveal */}
+              <PremiumCard delay={0} borderColor="#4ADE80" accentColor="#4ADE80">
                 <div className="space-y-6 relative z-10">
-                  <div
-                    className="absolute top-1/2 left-1/2 pointer-events-none select-none"
-                    style={{
-                      transform: 'translate(-50%, -50%) rotate(-20deg)',
-                      fontSize: '80px',
-                      fontWeight: 'bold',
-                      color: 'rgba(197, 160, 89, 0.04)',
-                      letterSpacing: '10px',
-                      whiteSpace: 'nowrap',
-                    }}
-                  >
-                    WELCOME
+                  <div className="space-y-3">
+                    <h1 className="text-5xl md:text-6xl font-black leading-tight" style={{ color: '#4ADE80' }}>
+                      RELAX.
+                    </h1>
+                    <h2 className="text-3xl md:text-4xl font-bold" style={{ color: '#F7F4ED' }}>
+                      THIS WAS A PRANK.
+                    </h2>
                   </div>
 
-                  <div className="relative z-20 flex items-start gap-4">
-                    <div className="w-12 h-12 rounded-full" style={{ backgroundColor: 'rgba(197, 160, 89, 0.2)', border: '2px solid #C5A059' }} />
-                    <div className="flex-1">
-                      <h1 className="text-4xl md:text-5xl font-black leading-tight mb-3" style={{ color: '#C5A059' }}>
-                        RELAX. THIS WAS A PRANK 😂
-                      </h1>
-                      <p className="text-sm font-semibold" style={{ color: '#4ADE80' }}>
-                        But you're actually in.
-                      </p>
-                    </div>
-                  </div>
+                  <div style={{ height: '1px', background: 'linear-gradient(90deg, #4ADE80, transparent)' }} />
 
-                  <div style={{ height: '2px', background: 'linear-gradient(90deg, #C5A059, transparent)' }} />
-
-                  <p className="text-base leading-relaxed" style={{ color: '#F7F4ED' }}>
-                    Everything you just went through was designed to reveal who you are under pressure. Your character. Your response to uncertainty.
-                  </p>
-
-                  <p className="text-lg font-bold leading-relaxed" style={{ color: '#4ADE80' }}>
-                    You passed. You're in the Research Subsystem.
-                  </p>
-
-                  <div
-                    className="border-l-4 p-6"
-                    style={{
-                      borderColor: '#C44536',
-                      backgroundColor: 'rgba(196, 69, 54, 0.08)',
-                    }}
-                  >
-                    <p className="text-base leading-relaxed font-medium" style={{ color: '#F7F4ED' }}>
-                      Your resilience, analytical thinking, and genuine curiosity—that's the exact profile we're building the team with. Welcome to RoboManipal Research.
+                  <div className="space-y-4">
+                    <p className="text-lg font-bold" style={{ color: '#F7F4ED' }}>
+                      Yeah… we saw that.
+                    </p>
+                    <p className="text-lg font-bold" style={{ color: '#4ADE80' }}>
+                      But you're in.
                     </p>
                   </div>
                 </div>
               </PremiumCard>
 
-              {/* Research Mindset */}
-              <PremiumCard delay={0.1} borderColor="#4ADE80" accentColor="#2D5A27">
+              {/* TENSION BREAK */}
+              <PremiumCard delay={0.08} borderColor="#C44536" accentColor="#C44536">
+                <div className="space-y-5 relative z-10">
+                  <h2 className="text-2xl font-black uppercase tracking-wider" style={{ color: '#C44536' }}>
+                    That Verification Test?
+                  </h2>
+
+                  <div className="space-y-3 text-base">
+                    <p style={{ color: '#F7F4ED' }}>
+                      <span style={{ color: '#C44536', fontWeight: 'bold' }}>Completely rigged.</span>
+                    </p>
+                    <p style={{ color: '#F7F4ED' }}>
+                      There was no correct answer.
+                    </p>
+                  </div>
+
+                  <div style={{ height: '1px', backgroundColor: 'rgba(196, 69, 54, 0.3)' }} />
+
+                  <div className="space-y-3 text-base">
+                    <p style={{ color: '#A8BCC1' }}>
+                      We weren't testing your answers.
+                    </p>
+                    <p style={{ color: '#A8BCC1' }} className="font-semibold">
+                      We were watching how you deal with not having one.
+                    </p>
+                  </div>
+                </div>
+              </PremiumCard>
+
+              {/* EMOTIONAL PAYOFF */}
+              <PremiumCard delay={0.16} borderColor="#C5A059" accentColor="#C5A059">
+                <div className="space-y-6 relative z-10">
+                  <p className="text-lg" style={{ color: '#F7F4ED' }}>
+                    Everything you just went through was completely designed to test your character.
+                  </p>
+
+                  <div
+                    className="border-l-4 p-6"
+                    style={{
+                      borderColor: '#4ADE80',
+                      backgroundColor: 'rgba(74, 222, 128, 0.1)',
+                    }}
+                  >
+                    <p className="text-base leading-relaxed font-bold" style={{ color: '#4ADE80' }}>
+                      The fact that you tried, analyzed, and cared? That's exactly who we want.
+                    </p>
+                  </div>
+                </div>
+              </PremiumCard>
+
+              {/* WHAT YOU EXPERIENCED */}
+              <PremiumCard delay={0.24} borderColor="#C44536" accentColor="#C44536">
+                <div className="space-y-6 relative z-10">
+                  <h2 className="text-2xl font-black uppercase tracking-wider" style={{ color: '#C44536' }}>
+                    You Just Experienced
+                  </h2>
+
+                  <div className="space-y-2">
+                    <div className="flex items-start gap-3 p-3 rounded" style={{ backgroundColor: 'rgba(196, 69, 54, 0.1)' }}>
+                      <div className="text-lg font-bold" style={{ color: '#C44536' }}>✗</div>
+                      <p style={{ color: '#F7F4ED' }}>Overthinking every detail</p>
+                    </div>
+                    <div className="flex items-start gap-3 p-3 rounded" style={{ backgroundColor: 'rgba(196, 69, 54, 0.1)' }}>
+                      <div className="text-lg font-bold" style={{ color: '#C44536' }}>✗</div>
+                      <p style={{ color: '#F7F4ED' }}>The panic of rejection</p>
+                    </div>
+                    <div className="flex items-start gap-3 p-3 rounded" style={{ backgroundColor: 'rgba(196, 69, 54, 0.1)' }}>
+                      <div className="text-lg font-bold" style={{ color: '#C44536' }}>✗</div>
+                      <p style={{ color: '#F7F4ED' }}>Self-doubt</p>
+                    </div>
+                  </div>
+
+                  <div style={{ height: '1px', backgroundColor: 'rgba(255, 255, 255, 0.1)' }} />
+
+                  <div className="flex items-start gap-3 p-3 rounded" style={{ backgroundColor: 'rgba(74, 222, 128, 0.1)' }}>
+                    <div className="text-lg font-bold" style={{ color: '#4ADE80' }}>✓</div>
+                    <p style={{ color: '#F7F4ED' }}>But you kept trying</p>
+                  </div>
+                </div>
+              </PremiumCard>
+
+              {/* WHY YOU PASSED */}
+              <PremiumCard delay={0.32} borderColor="#4ADE80" accentColor="#4ADE80">
+                <div className="space-y-6 relative z-10">
+                  <h2 className="text-2xl font-black uppercase tracking-wider" style={{ color: '#4ADE80' }}>
+                    Why You Passed
+                  </h2>
+
+                  <div className="border-2 p-6" style={{ borderColor: '#4ADE80', backgroundColor: 'rgba(74, 222, 128, 0.05)' }}>
+                    <p className="text-lg font-bold" style={{ color: '#F7F4ED' }}>
+                      You passed. You're in the Research Subsystem.
+                    </p>
+                  </div>
+
+                  <div className="space-y-3 text-base">
+                    <p style={{ color: '#A8BCC1' }}>
+                      We don't pick people who always get things right.
+                    </p>
+                    <p style={{ color: '#A8BCC1' }}>
+                      We pick people who don't shut down when things don't make sense.
+                    </p>
+                    <p style={{ color: '#A8BCC1' }}>
+                      People who stay, think, and push anyway.
+                    </p>
+                  </div>
+                </div>
+              </PremiumCard>
+
+              {/* BEHAVIORAL ANALYSIS REPORT */}
+              <PremiumCard delay={0.40} borderColor="#C5A059" accentColor="#C5A059">
+                <div className="space-y-5 relative z-10">
+                  <h2 className="text-2xl font-black uppercase tracking-wider" style={{ color: '#C5A059' }}>
+                    Behavioral Analysis Report
+                  </h2>
+
+                  <div style={{ height: '1px', background: 'linear-gradient(90deg, #C5A059, transparent)' }} />
+
+                  <div className="space-y-2 text-sm">
+                    <div className="flex justify-between p-2" style={{ color: '#A8BCC1' }}>
+                      <span>Time spent staring at screen:</span>
+                      <span style={{ color: '#C44536', fontWeight: 'bold' }}>Concerning</span>
+                    </div>
+                    <div className="flex justify-between p-2" style={{ color: '#A8BCC1' }}>
+                      <span>Number of re-reads:</span>
+                      <span style={{ color: '#C44536', fontWeight: 'bold' }}>We counted</span>
+                    </div>
+                    <div className="flex justify-between p-2" style={{ color: '#A8BCC1' }}>
+                      <span>Attempts to reverse-engineer:</span>
+                      <span style={{ color: '#4ADE80', fontWeight: 'bold' }}>Respectable</span>
+                    </div>
+                    <div className="flex justify-between p-2" style={{ color: '#A8BCC1' }}>
+                      <span>Emotional damage:</span>
+                      <span style={{ color: '#C44536', fontWeight: 'bold' }}>Non-zero</span>
+                    </div>
+                    <div className="flex justify-between p-2" style={{ color: '#A8BCC1' }}>
+                      <span>Confidence before submit:</span>
+                      <span style={{ color: '#C44536', fontWeight: 'bold' }}>Unstable</span>
+                    </div>
+                    <div className="flex justify-between p-2" style={{ color: '#A8BCC1' }}>
+                      <span>Thought "this is a trick":</span>
+                      <span style={{ color: '#4ADE80', fontWeight: 'bold' }}>Correct, still suffered</span>
+                    </div>
+                  </div>
+                </div>
+              </PremiumCard>
+
+              {/* PERSONALITY CLASSIFICATION */}
+              <PremiumCard delay={0.48} borderColor="#4ADE80" accentColor="#4ADE80">
+                <div className="space-y-5 relative z-10">
+                  <h2 className="text-2xl font-black uppercase tracking-wider" style={{ color: '#4ADE80' }}>
+                    Personality Classification
+                  </h2>
+
+                  <p style={{ color: '#A8BCC1' }}>
+                    You have been classified as:
+                  </p>
+
+                  <div className="space-y-2 text-sm">
+                    <div className="flex items-center gap-3 p-3 rounded" style={{ backgroundColor: 'rgba(74, 222, 128, 0.06)' }}>
+                      <span style={{ color: '#A8BCC1' }}>☐</span>
+                      <span style={{ color: '#A8BCC1' }}>Calm under pressure</span>
+                    </div>
+                    <div className="flex items-center gap-3 p-3 rounded" style={{ backgroundColor: 'rgba(74, 222, 128, 0.06)' }}>
+                      <span style={{ color: '#A8BCC1' }}>☐</span>
+                      <span style={{ color: '#A8BCC1' }}>Mildly confused</span>
+                    </div>
+                    <div className="flex items-center gap-3 p-3 rounded" style={{ backgroundColor: 'rgba(74, 222, 128, 0.06)' }}>
+                      <span style={{ color: '#A8BCC1' }}>☐</span>
+                      <span style={{ color: '#A8BCC1' }}>Overthinking</span>
+                    </div>
+                    <div className="flex items-center gap-3 p-3 rounded" style={{ backgroundColor: 'rgba(74, 222, 128, 0.06)' }}>
+                      <span style={{ color: '#A8BCC1' }}>☐</span>
+                      <span style={{ color: '#A8BCC1' }}>Questioning life decisions</span>
+                    </div>
+                    <div className="flex items-center gap-3 p-3 rounded border-2" style={{ borderColor: '#4ADE80', backgroundColor: 'rgba(74, 222, 128, 0.15)' }}>
+                      <span style={{ color: '#4ADE80' }}>☑</span>
+                      <span style={{ color: '#4ADE80', fontWeight: 'bold' }}>Exactly what we were looking for</span>
+                    </div>
+                  </div>
+                </div>
+              </PremiumCard>
+
+              {/* Welcome to Research */}
+              <PremiumCard delay={0.56} borderColor="#4ADE80" accentColor="#2D5A27">
                 <div className="space-y-5 relative z-10">
                   <div>
                     <h2 className="text-2xl font-black uppercase tracking-wider" style={{ color: '#4ADE80' }}>
@@ -217,7 +372,7 @@ export default function RevealPage() {
               </PremiumCard>
 
               {/* What to Bring */}
-              <PremiumCard delay={0.2} borderColor="#C5A059" accentColor="#C5A059">
+              <PremiumCard delay={0.64} borderColor="#C5A059" accentColor="#C5A059">
                 <div className="space-y-5 relative z-10">
                   <div>
                     <h2 className="text-2xl font-black uppercase tracking-wider" style={{ color: '#C5A059' }}>
@@ -271,7 +426,7 @@ export default function RevealPage() {
               </PremiumCard>
 
               {/* Countdown Timer */}
-              <PremiumCard delay={0.3} borderColor="#C44536" accentColor="#C44536">
+              <PremiumCard delay={0.72} borderColor="#C44536" accentColor="#C44536">
                 <div className="space-y-6 relative z-10">
                   <div>
                     <h2 className="text-2xl font-black uppercase tracking-wider" style={{ color: '#C44536' }}>
@@ -289,7 +444,7 @@ export default function RevealPage() {
               </PremiumCard>
 
               {/* Final Message */}
-              <PremiumCard delay={0.4} borderColor="#4ADE80" accentColor="#C5A059">
+              <PremiumCard delay={0.80} borderColor="#4ADE80" accentColor="#C5A059">
                 <div className="space-y-5 text-center relative z-10">
                   <p className="text-xl leading-relaxed font-black" style={{ color: '#4ADE80' }}>
                     This is just the beginning.
@@ -316,6 +471,45 @@ export default function RevealPage() {
                   </p>
                 </div>
               </PremiumCard>
+
+              {/* CTA Button */}
+              <motion.div
+                initial={{ opacity: 0, y: 24 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.88, duration: 0.5 }}
+                className="flex flex-col gap-4"
+              >
+                <BrutalistButton
+                  onClick={() => {
+                    // Action can be added here (e.g., navigate to next page)
+                    console.log('Entering Research System');
+                  }}
+                  className="text-lg py-4"
+                  style={{
+                    backgroundColor: '#4ADE80',
+                    color: '#0D1117',
+                    fontWeight: 'bold',
+                    borderColor: '#4ADE80',
+                  }}
+                >
+                  ENTER RESEARCH SYSTEM →
+                </BrutalistButton>
+                <p className="text-center text-sm" style={{ color: '#A8BCC1' }}>
+                  No more emotional damage. Probably.
+                </p>
+              </motion.div>
+
+              {/* Footer */}
+              <motion.div
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ delay: 0.96, duration: 0.5 }}
+                className="text-center py-8"
+              >
+                <p className="text-xs tracking-widest font-bold" style={{ color: '#A8BCC1' }}>
+                  DESIGNED TO STRESS YOU. BUILT TO SELECT YOU.
+                </p>
+              </motion.div>
             </motion.div>
           </>
         )}

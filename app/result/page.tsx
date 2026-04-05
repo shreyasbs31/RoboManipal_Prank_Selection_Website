@@ -1,11 +1,11 @@
 'use client';
 
-import { useState, useEffect } from 'react';
-import { useRouter } from 'next/navigation';
-import { motion, AnimatePresence } from 'framer-motion';
-import GridBackground from '@/components/GridBackground';
-import BrutalistCard from '@/components/BrutalistCard';
 import BrutalistButton from '@/components/BrutalistButton';
+import BrutalistCard from '@/components/BrutalistCard';
+import GridBackground from '@/components/GridBackground';
+import { AnimatePresence, motion } from 'framer-motion';
+import { useRouter } from 'next/navigation';
+import { useEffect, useState } from 'react';
 
 export default function ResultPage() {
   const router = useRouter();
@@ -72,7 +72,7 @@ export default function ResultPage() {
                 <div
                   className="absolute top-1/2 left-1/2 pointer-events-none select-none"
                   style={{
-                    transform: 'translate(-50%, -50%) rotate(-12deg)',
+                    transform: 'translate(-50%, -50%) rotate(-30deg)',
                     fontSize: '80px',
                     fontWeight: 'bold',
                     color: 'rgba(196, 69, 54, 0.08)',
@@ -80,7 +80,7 @@ export default function ResultPage() {
                     whiteSpace: 'nowrap',
                   }}
                 >
-                  REJECTED
+                  WE'RE SORRY
                 </div>
 
                 <div className="space-y-6 relative z-10">
@@ -96,12 +96,25 @@ export default function ResultPage() {
 
                   <div className="h-px bg-ink/10" />
 
+                  {/* Main Rejection Message */}
+                  <div className="space-y-4 bg-gradient-to-br from-red/5 to-orange/5 border-l-4 border-red p-6 md:p-7">
+                    <p className="text-base md:text-lg font-semibold leading-relaxed text-ink">
+                      We regret to inform you that you have not been selected for the <span className="font-bold text-red">Research Subsystem of RoboManipal</span> following the completion of the Research Taskphase.
+                    </p>
+                    <div className="h-px bg-red/20" />
+                    <p className="text-sm md:text-base leading-relaxed text-ink">
+                      We sincerely appreciate the time, effort, and commitment you have shown throughout the taskphase. We hope this experience has been a meaningful learning journey and has helped you build new skills and perspectives.
+                    </p>
+                  </div>
+
+                  <div className="h-px bg-ink/10" />
+                  
                   <div className="space-y-4 text-sm leading-relaxed">
                     <p>
-                      Your performance did not meet the threshold required for admission.
+                      Your Taskphase performance has been evaluated across all stages, including interviews, consistency, and overall engagement throughout the taskphase. Based on current assessment metrics, your profile falls marginally below the required selection threshold.
                     </p>
                     <p className="text-xs text-brown">
-                      You may reapply in future cycles if positions become available.
+                      Thank you for your effort and participation. We wish you all the very best in your future endeavors and are confident that you will continue to grow and achieve great things.
                     </p>
                   </div>
 
@@ -115,18 +128,18 @@ export default function ResultPage() {
                     <div className="space-y-2 text-xs text-brown">
                       <div className="flex justify-between">
                         <span>Verification Task:</span>
-                        <span className="font-bold text-red">FAILED</span>
+                        <span className="font-bold text-red">NOT CLEARED</span>
                       </div>
                       <div className="flex justify-between">
-                        <span>Code Accuracy:</span>
-                        <span className="font-bold text-red">0%</span>
+                        <span>Consistency Score:</span>
+                        <span className="font-bold text-red">INSUFFICIENT</span>
                       </div>
                       <div className="flex justify-between">
-                        <span>Overall Rating:</span>
+                        <span>Overall Ranking:</span>
                         <span className="font-bold text-red">BELOW THRESHOLD</span>
                       </div>
                       <div className="flex justify-between">
-                        <span>Decision:</span>
+                        <span>Team Decision:</span>
                         <span className="font-bold text-red">FINAL — NOT SELECTED</span>
                       </div>
                     </div>
@@ -142,7 +155,7 @@ export default function ResultPage() {
                   </BrutalistButton>
 
                   <p className="text-[10px] text-brown">
-                    Ref: RM/EVAL/2025-FINAL · This decision is binding.
+                    Ref: RM/RES/2026-FINAL-INTERVIEW-RESULT · This decision is binding.
                   </p>
                 </div>
               </BrutalistCard>

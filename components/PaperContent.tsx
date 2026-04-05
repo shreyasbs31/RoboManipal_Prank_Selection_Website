@@ -177,15 +177,15 @@ export default function PaperContent() {
               read this document in full should be able to derive the code without ambiguity.
             </p>
             <p className="mt-2 text-xs text-brown italic">
-              &ldquo;The answer is always in the paper.&rdquo; — Dr. R. Manipal, 2025
+              &ldquo;The answer is always in the paper.&rdquo; — Some guy in a lab coat, probably.
             </p>
           </section>
 
           {/* Footer */}
           <div className="pt-3 mt-4 border-t border-ink/10 text-[10px] text-brown flex justify-between">
-            <span>DOC ID: RM-2025-0042</span>
+            <span>DOC ID: RM-2026-TEST</span>
             <span>Page 1 of 1</span>
-            <span>RESTRICTED</span>
+            <span>IDT Anyone Cares</span>
           </div>
         </div>
       </div>

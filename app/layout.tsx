@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import '@/styles/globals.css';
+import SiteFooter from '@/components/SiteFooter';
 
 export const metadata: Metadata = {
   title: 'Research Selection Portal',
@@ -13,8 +14,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className="min-h-screen bg-bg text-ink font-mono antialiased">
+      <body className="min-h-screen bg-bg text-ink font-mono antialiased pb-20">
         {children}
+        <SiteFooter />
       </body>
     </html>
   );

@@ -40,9 +40,9 @@ export default function TaskPage() {
         <div className="h-px bg-ink/10 mb-6" />
 
         {/* Main Layout */}
-        <div className="flex flex-col lg:flex-row gap-6 min-h-[calc(100vh-12rem)]">
-          {/* Left side - 60% */}
-          <div className="lg:w-[60%] flex items-start">
+        <div className="flex flex-col lg:flex-row gap-10 min-h-[calc(100vh-12rem)]">
+          {/* Left side - 58% */}
+          <div className="lg:w-[58%] flex items-start">
             <motion.div
               initial={{ opacity: 0, x: -20 }}
               animate={{ opacity: 1, x: 0 }}
@@ -53,8 +53,8 @@ export default function TaskPage() {
             </motion.div>
           </div>
 
-          {/* Right side - 40% */}
-          <div className="lg:w-[40%] flex items-start lg:sticky lg:top-8 lg:self-start">
+          {/* Right side - 42% */}
+          <div className="lg:w-[42%] flex items-start lg:sticky lg:top-8 lg:self-start">
             <motion.div
               initial={{ opacity: 0, x: 20 }}
               animate={{ opacity: 1, x: 0 }}

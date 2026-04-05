@@ -17,7 +17,7 @@ export default function LandingPage() {
         {/* Top right session + timestamp */}
         <div className="absolute top-4 right-4 text-right text-xs text-brown space-y-1">
           <div>SESSION ID: RX-23A</div>
-          <div>REF: RM/RES/2025-Q1</div>
+          <div>REF: RM/RES/2026-PHASE1</div>
         </div>
 
         {/* Top left — Classification mark */}

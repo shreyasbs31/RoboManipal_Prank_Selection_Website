@@ -55,14 +55,14 @@ export default function PaperContent() {
             RoboManipal Research Subsystem — Internal Document #RM-2026-TEST
           </div>
           <h2 className="text-base md:text-lg font-bold mb-2 leading-tight uppercase">
-            Cross-Domain Signal Synchronization in<br />
-            Robotic Manipulation of Task-Phase Systems
+            Robotic Manipulation Test of (Task-Phase) Systems
           </h2>
           <div className="text-xs text-brown">
-            Authors: Shreyas B S, Krish Gandhi, Nilay Sasturkar, Vibhor Sachan, Yashwanth Reddy, Dhruv Agrawal, Dr. Arnav Sharma
+            Authors: Your terrifying RoboManipal Seniors (and Krish Gandhi)
           </div>
+          <div className="text-xs text-brown">Published: April 1, 2026</div>
           <div className="text-[10px] text-brown mt-1">
-            Published: Internal Review · Classification: MEH
+            Published: Internal Review · Classification: MEH!
           </div>
         </div>
 

@@ -94,6 +94,18 @@ html, body {
   50% { transform: translateY(-6px); }
 }
 
+/* Heavy pulse for urgent popups */
+@keyframes pulse-heavy {
+  0%, 100% {
+    transform: scale(1);
+    box-shadow: 12px 12px 0 #C44536;
+  }
+  50% {
+    transform: scale(1.02);
+    box-shadow: 14px 14px 0 #C44536;
+  }
+}
+
 /* Scrollbar styling */
 ::-webkit-scrollbar {
   width: 8px;

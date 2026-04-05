@@ -6,6 +6,7 @@ import { motion } from 'framer-motion';
 import BrutalistButton from './BrutalistButton';
 import AttemptIndicator from './AttemptIndicator';
 import ConfirmationModal from './ConfirmationModal';
+import CheekyPopup from './CheekyPopup';
 import { ATTEMPT_MESSAGES, MAX_ATTEMPTS } from '@/lib/constants';
 
 export default function TerminalInput() {
@@ -15,6 +16,8 @@ export default function TerminalInput() {
   const [message, setMessage] = useState('');
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [showModal, setShowModal] = useState(false);
+  const [showCheekyPopup, setShowCheekyPopup] = useState(false);
+  const [cheekyAttempt, setCheekyAttempt] = useState<1 | 2>(1);
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setInput(e.target.value.toUpperCase().trim());
@@ -35,6 +38,16 @@ export default function TerminalInput() {
     }
 
     setMessage(ATTEMPT_MESSAGES[newAttempts] || '');
+
+    // Show cheeky popup on first and second failures
+    if (newAttempts === 1 || newAttempts === 2) {
+      setCheekyAttempt(newAttempts as 1 | 2);
+      setShowCheekyPopup(true);
+      // Auto-close after 3.5 seconds
+      setTimeout(() => {
+        setShowCheekyPopup(false);
+      }, 3500);
+    }
 
     setTimeout(() => {
       setIsSubmitting(false);
@@ -165,6 +178,13 @@ export default function TerminalInput() {
         isOpen={showModal}
         onCancel={() => setShowModal(false)}
         onConfirm={handleConfirmGiveUp}
+      />
+
+      {/* Cheeky Popup */}
+      <CheekyPopup
+        isOpen={showCheekyPopup}
+        onClose={() => setShowCheekyPopup(false)}
+        attempt={cheekyAttempt}
       />
     </>
   );

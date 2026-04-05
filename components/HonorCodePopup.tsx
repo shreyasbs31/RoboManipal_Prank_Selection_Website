@@ -65,7 +65,7 @@ export default function HonorCodePopup() {
               className="space-y-4 text-sm leading-relaxed mb-6"
             >
               <p className="text-brown">
-                <strong>Here's the deal:</strong> Don't discuss the answers to this test with your batchmates. Let them figure it out on their own.
+                <strong>Here's the deal:</strong> Don't discuss the answers to this test with your teammates. Let them figure it out on their own.
               </p>
 
               <p className="text-brown">

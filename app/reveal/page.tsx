@@ -6,6 +6,7 @@ import GridBackground from '@/components/GridBackground';
 import BrutalistCard from '@/components/BrutalistCard';
 import LoadingSequence from '@/components/LoadingSequence';
 import ConfettiEffect from '@/components/ConfettiEffect';
+import CountdownTimer from '@/components/CountdownTimer';
 
 export default function RevealPage() {
   const [isLoading, setIsLoading] = useState(true);
@@ -241,31 +242,17 @@ export default function RevealPage() {
                 </div>
               </motion.div>
 
-              {/* ===== FINAL MESSAGE ===== */}
+              {/* ===== COUNTDOWN TIMER ===== */}
               <motion.div variants={fadeUp}>
                 <div
-                  className="border-2 p-6 md:p-10 text-center"
+                  className="border-2 p-6 md:p-10"
                   style={{
                     backgroundColor: '#161B22',
-                    borderColor: 'rgba(255,255,255,0.1)',
-                    boxShadow: '6px 6px 0 rgba(255,255,255,0.05)',
+                    borderColor: '#2D5A27',
+                    boxShadow: '8px 8px 0 #2D5A27',
                   }}
                 >
-                  <motion.div
-                    style={{ animation: 'float 3s ease-in-out infinite' }}
-                    className="text-5xl mb-4"
-                  >
-                    🚀
-                  </motion.div>
-                  <h3
-                    className="text-xl font-bold mb-3"
-                    style={{ color: '#F7F4ED' }}
-                  >
-                    LET&apos;S BUILD SOMETHING AMAZING.
-                  </h3>
-                  <p className="text-sm" style={{ color: '#8B949E' }}>
-                    See you at our first meeting. Bring curiosity — that&apos;s all you need.
-                  </p>
+                  <CountdownTimer />
                 </div>
               </motion.div>
             </motion.div>

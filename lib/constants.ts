@@ -10,14 +10,15 @@ export const COLORS = {
 export const MAX_ATTEMPTS = 3;
 
 export const ATTEMPT_MESSAGES: Record<number, string> = {
-  1: 'Incorrect code. Re-evaluate the paper.',
-  2: 'Code mismatch. Check assumptions.',
+  1: '✗ VERIFICATION FAILED — Code does not match any known result hash. Re-evaluate the document.',
+  2: '✗ SECOND MISMATCH — Ensure you are reading Section 4 and Section 5 carefully. One attempt remaining.',
 };
 
 export const LOADING_MESSAGES = [
-  { text: '> Loading feedback...', delay: 0 },
-  { text: '> Reviewing evaluation...', delay: 800 },
-  { text: '> Wait a second...', delay: 1600 },
+  { text: '> Connecting to evaluation server...', delay: 0 },
+  { text: '> Pulling feedback from review committee...', delay: 800 },
+  { text: '> Decrypting evaluation report...', delay: 1600 },
+  { text: '> Hold on, something doesn\'t look right...', delay: 2200 },
 ];
 
-export const REVEAL_DELAY = 2400;
+export const REVEAL_DELAY = 3000;

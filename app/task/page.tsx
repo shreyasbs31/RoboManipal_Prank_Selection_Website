@@ -1,14 +1,16 @@
 'use client';
 
-import { motion } from 'framer-motion';
 import GridBackground from '@/components/GridBackground';
+import HonorCodePopup from '@/components/HonorCodePopup';
 import PaperContent from '@/components/PaperContent';
 import TerminalInput from '@/components/TerminalInput';
+import { motion } from 'framer-motion';
 
 export default function TaskPage() {
   return (
     <div className="min-h-screen relative">
       <GridBackground />
+      <HonorCodePopup />
 
       <div className="relative z-10 max-w-7xl mx-auto p-6 md:p-8">
         {/* Page Header */}

@@ -1,13 +1,13 @@
 'use client';
 
-import { useState, useCallback } from 'react';
-import { useRouter } from 'next/navigation';
-import { motion } from 'framer-motion';
-import BrutalistButton from './BrutalistButton';
-import AttemptIndicator from './AttemptIndicator';
-import ConfirmationModal from './ConfirmationModal';
-import CheekyPopup from './CheekyPopup';
 import { ATTEMPT_MESSAGES, MAX_ATTEMPTS } from '@/lib/constants';
+import { motion } from 'framer-motion';
+import { useRouter } from 'next/navigation';
+import { useCallback, useState } from 'react';
+import AttemptIndicator from './AttemptIndicator';
+import BrutalistButton from './BrutalistButton';
+import CheekyPopup from './CheekyPopup';
+import ConfirmationModal from './ConfirmationModal';
 
 export default function TerminalInput() {
   const router = useRouter();

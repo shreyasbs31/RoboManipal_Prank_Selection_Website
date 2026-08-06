@@ -60,7 +60,7 @@ export default function PaperContent() {
           <div className="text-xs text-brown">
             Authors: Your terrifying RoboManipal Seniors (and Krish Gandhi)
           </div>
-          <div className="text-xs text-brown">Published: April 1, 2026</div>
+          <div className="text-xs text-brown">Published: August 5, 2026</div>
           <div className="text-[10px] text-brown mt-1">
             Published: Internal Review · Classification: MEH!
           </div>
